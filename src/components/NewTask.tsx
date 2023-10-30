@@ -53,6 +53,7 @@ export function NewTask() {
   }
 
   function countTasksFinisheds() {
+    console.log("atualizando o contador");
     const total = tasks.reduce((contador, task) => {
       if (task.isFinished) {
         contador++;
@@ -81,21 +82,21 @@ export function NewTask() {
           </button>
         </div>
       </form>
-      <div className={styles.tasks}>
-        <div className={styles.taskInfo}>
-          <p>
-            Tarefas criadas <span>{tasks.length}</span>
-          </p>
-          <p className={styles.taskInfoFinished}>
-            Concluídas{" "}
-            <span>
-              {tasks.length > 0
-                ? countTasksFisished + " de " + tasks.length
-                : tasks.length}
-            </span>
-          </p>
-        </div>
+      {/* <div className={styles.tasks}> */}
+      <div className={styles.taskInfo}>
+        <p>
+          Tarefas criadas <span>{tasks.length}</span>
+        </p>
+        <p className={styles.taskInfoFinished}>
+          Concluídas{" "}
+          <span>
+            {tasks.length > 0
+              ? countTasksFisished + " de " + tasks.length
+              : tasks.length}
+          </span>
+        </p>
       </div>
+      {/* </div> */}
 
       {/* EXIBICAO DA LISTA DE TASKS */}
       {tasks.map((task) => {
