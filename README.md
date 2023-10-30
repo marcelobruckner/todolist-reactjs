@@ -1,27 +1,47 @@
-# React + TypeScript + Vite
+<Português>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Projeto desafio 1 do curso Ignite - Trilha ReactJS
 
-Currently, two official plugins are available:
+O desafio é um TODO list onde temos que inserir as tarefas, marcar como concluídas e apagar a tarefa.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+Utilizei as spec abaixo:
 
 ```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+"dependencies": {
+    "phosphor-react": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+}
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<Inglês>
+
+# Challenge project 1 of the Ignite course - ReactJS Trail
+
+The challenge is a TODO list where we have to enter the tasks, mark them as completed and delete the task.
+
+I used the specs below:
+
+```js
+"dependencies": {
+    "phosphor-react": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+}
+```
+
+<Francês>
+
+# Projet Challenge 1 du cours Ignite - ReactJS Trail
+
+Le défi est une liste TODO dans laquelle nous devons saisir les tâches, les marquer comme terminées et supprimer la tâche.
+
+J'ai utilisé les spécifications ci-dessous :
+
+```js
+"dependencies": {
+    "phosphor-react": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+}
+```
