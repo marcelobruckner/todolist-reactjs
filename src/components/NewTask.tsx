@@ -4,11 +4,11 @@ import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
 import { PlusCircle } from "phosphor-react";
 
 import clipboard from "../assets/Clipboard.svg";
+import { TaskInfo } from "./TaskInfo";
 
 export function NewTask() {
   const [tasks, setTasks] = useState<TaskType[]>([]);
   const [newTaskText, setNewTaskText] = useState("");
-  const [countTasksFisished, setCountTasksFisished] = useState(0);
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
@@ -37,7 +37,7 @@ export function NewTask() {
     const taskWithoutDeletedOne = tasks.filter((task) => {
       return task.id != taskIdToDelete;
     });
-    setTasks(taskWithoutDeletedOne);
+    setTasks([...taskWithoutDeletedOne]);
   }
 
   function changeTask(taskNumberToEdit: number) {
@@ -49,19 +49,6 @@ export function NewTask() {
     });
 
     setTasks([...tasksEdited]);
-    countTasksFinisheds();
-  }
-
-  function countTasksFinisheds() {
-    console.log("atualizando o contador");
-    const total = tasks.reduce((contador, task) => {
-      if (task.isFinished) {
-        contador++;
-      }
-      return contador;
-    }, 0);
-
-    setCountTasksFisished(total);
   }
 
   return (
@@ -82,21 +69,8 @@ export function NewTask() {
           </button>
         </div>
       </form>
-      {/* <div className={styles.tasks}> */}
-      <div className={styles.taskInfo}>
-        <p>
-          Tarefas criadas <span>{tasks.length}</span>
-        </p>
-        <p className={styles.taskInfoFinished}>
-          Concluídas{" "}
-          <span>
-            {tasks.length > 0
-              ? countTasksFisished + " de " + tasks.length
-              : tasks.length}
-          </span>
-        </p>
-      </div>
-      {/* </div> */}
+
+      <TaskInfo tasks={tasks} />
 
       {/* EXIBICAO DA LISTA DE TASKS */}
       {tasks.map((task) => {

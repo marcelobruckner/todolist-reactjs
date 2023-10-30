@@ -1,5 +1,4 @@
 .newTask {
-  /* border: 1px solid green; */
   width: 46rem;
 
   display: flex;
@@ -47,45 +46,9 @@
 
 
 
-/*  TASK INFO*/
-/* .tasks {
-  border: 1px solid green;
-  width: 46rem;
-  margin: auto;
-
-} */
-
-.taskInfo {
-  /* border: 1px solid yellow; */
-  display: flex;
-  justify-content: space-between;
-  /* margin-bottom: 40px; */
-  color: var(--blue);
-  font-weight: bold;
-
-  width: 46rem;
-  /* margin: auto; */
-}
-
-.taskInfo span {
-  color: var(--gray-200);
-  background-color: var(--gray-400);
-  padding: 8px 2px;
-  gap: 10px;
-  border-radius: 50%;
-  height: 100%;
-  width: 100%;
-}
-
-.taskInfoFinished {
-  color: var(--purple);
-  font-weight: bold;
-}
-
 
 /* ESTILIZACAO QUANDO NÃO TIVER TASK CRIADA */
 .noContent {
-  /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;
