@@ -1,0 +1,47 @@
+/*ESTILIZAÇÃO APENAS DA LINHA DA TASK
+CHECKBOX + TEXTO + ICONE LIXEIRA
+*/
+
+.task {
+  /* border: 1px solid blue; */
+  width: 46rem;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  color: var(--gray-100);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+
+.task input[type="checkbox"]:checked+label {
+  cursor: pointer;
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.task>label {
+  /* border: 1px solid white; */
+  width: 39.875rem;
+}
+
+.task button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
+}
+
+.task button:hover {
+  color: var(--danger);
+}
